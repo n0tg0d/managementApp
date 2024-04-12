@@ -12,7 +12,13 @@
                     <hr>
                     <h4 class="card-title">Email : {{ $adminData->email }}</h4>
                     <hr>
-                   <a class="btn btn-primary btn-rounded waves-effect waves-light" href="">Edit Profile </a>
+                    <h4 class="card-title">UserName : {{ $adminData->username }}</h4>
+                    <hr>
+                    <h4 class="card-title">Phone : {{ $adminData->phone_number }}</h4>
+                    <hr>
+                    <h4 class="card-title">Adresse : {{ $adminData->adresse }}</h4>
+                    <hr>
+                   <a class="btn btn-primary btn-rounded waves-effect waves-light" href="{{ route('edit.profile') }}">Edit Profile </a>
                 </div>
             </div>
         </div>
