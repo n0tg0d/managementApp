@@ -22,25 +22,26 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                        <form >
+                        <form method="post" action="{{ route('store.profile')}}" enctype="multipart/form-data">
+                            @csrf
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">UserName</label>
                                 <div class="col-sm-10">
-                                    <input name="username" class="form-control" type="text" placeholder="User Name" id="example-text-input">
+                                    <input name="username" value="{{$editData->username}}" class="form-control" type="text" id="example-text-input">
                                 </div>
                             </div>
                             <!-- end row -->
                             <div class="row mb-3">
                                 <label for="example-search-input" class="col-sm-2 col-form-label">Full Name</label>
                                 <div class="col-sm-10">
-                                    <input name="name" class="form-control" type="search" placeholder="Full Name " id="example-search-input">
+                                    <input name="name" value="{{$editData->name}}" class="form-control" type="search"  id="example-search-input">
                                 </div>
                             </div>
                             <!-- end row -->
                             <div class="row mb-3">
                                 <label for="example-email-input" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input name="email" class="form-control" type="email" placeholder="something@example.com" id="example-email-input">
+                                    <input name="email" value="{{$editData->email}}" class="form-control" type="email"  id="example-email-input">
                                 </div>
                             </div>
                             <!-- end row -->
@@ -48,21 +49,14 @@
                             <div class="row mb-3">
                                 <label for="example-tel-input" class="col-sm-2 col-form-label">Telephone</label>
                                 <div class="col-sm-10">
-                                    <input name="phone_number" class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
-                                </div>
-                            </div>
-                            <!-- end row -->
-                            <div class="row mb-3">
-                                <label for="example-password-input" class="col-sm-2 col-form-label">Password</label>
-                                <div class="col-sm-10">
-                                    <input name="password" class="form-control" type="password" placeholder="*******"  id="example-password-input">
+                                    <input name="phone_number" value="{{$editData->phone_number}}" class="form-control" type="tel"  id="example-tel-input">
                                 </div>
                             </div>
                             <!-- end row -->
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Adresse</label>
                                 <div class="col-sm-10">
-                                    <input name="adresse" class="form-control" type="text" placeholder=" 9-11 Adresse name st. 2001" id="example-text-input">
+                                    <input name="adresse" value="{{$editData->adresse}}" class="form-control" type="text" id="example-text-input">
                                 </div>
                             </div>        
                             <!-- end row -->
@@ -73,9 +67,11 @@
                                 </div>
                             </div>      
                             <!-- end row -->
-                            <button type="button" class="btn btn-primary waves-effect waves-light" type="submit"  value="update profile">
-                                    Submit <i class="ri-check-line align-middle me-2"></i> 
-                            </button>
+                            <div class="form-group mb-3 text-center row mt-3 pt-1">
+                                    <div class="col-12">
+                                        <button class="btn btn-primary waves-effect waves-light" type="submit">Submit<i class="ri-check-line align-middle me-2"></i> </button>
+                                    </div>
+                            </div>
                         </form>    
                         </div>
                     </div>
