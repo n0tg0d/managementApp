@@ -141,6 +141,7 @@ $adminData = App\Models\User::find($id);
         <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
         
+        
         <!-- Responsive examples -->
         <script src="{{ asset('backend/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
@@ -173,6 +174,35 @@ $adminData = App\Models\User::find($id);
             }
         @endif
         </script>
+
+        
+        <!--tinymce js-->
+        <script src="{{ asset('backend/assets/libs/tinymce/tinymce.min.js') }} "></script>
+
+        <!-- init js -->
+        <script src="{{ asset('backend/assets/js/pages/form-editor.init.js') }} "></script>
+
+         <!-- Required datatable js -->
+        <script src="{{ asset('backend/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
+            <!-- Datatable init js -->
+        <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
+
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+        <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
+
+        
+        <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+        
     </body>
 
 </html>

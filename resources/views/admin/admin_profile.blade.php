@@ -4,10 +4,14 @@
 <div class="page-content">
     <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-4">
             <div class="card">
                 <img class="card-img-top img-fluid" src="{{ (!empty($adminData->profile_image))? url('upload/admin_images/'
                     .$adminData->profile_image):url('upload/no_image.jpg') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Name : {{ $adminData->name }}</h4>
                     <hr>

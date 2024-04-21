@@ -23,7 +23,7 @@ $adminData = App\Models\User::find($id);
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="index.html" class="waves-effect">
+                                <a href="{{ route('dashboard')}}" class="waves-effect">
                                     <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
                                     <span>Dashboard</span>
                                 </a>
@@ -38,12 +38,11 @@ $adminData = App\Models\User::find($id);
                 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-mail-send-line"></i>
-                                    <span>Email</span>
+                                    <i class="ri-shopping-basket-2-line"></i>
+                                    <span>Manage Suppliers</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">Inbox</a></li>
-                                    <li><a href="email-read.html">Read Email</a></li>
+                                    <li><a href=" {{ route('supplier.all') }}">All Suppliers</a></li>
                                 </ul>
                             </li>
 

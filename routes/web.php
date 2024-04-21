@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Pos\SupplierController;
 
 
 /*
@@ -34,6 +35,25 @@ Route::controller(AdminController::class)->group(function() {
     Route::post('/update/password', [AdminController::class, 'updatepassword'])->name('update.password');
 
 });
+
+//Suppliers All Routes
+Route::controller(SupplierController::class)->group(function() {
+    Route::get('/supplier/all', 'SupplierAll')->name('supplier.all');
+    Route::get('/supplier/add', 'SupplierAdd')->name('supplier.add');
+    Route::post('/supplier/store', 'SupplierStore')->name('supplier.store');
+    Route::get('/supplier/edit/{id}', 'SupplierEdit')->name('supplier.edit');
+    Route::post('/supplier/update', 'SupplierUpdate')->name('supplier.update');
+    Route::get('/supplier/delete/{id}', 'SupplierDelete')->name('supplier.delete');
+   
+
+});
+
+
+
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
